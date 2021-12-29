@@ -25,7 +25,7 @@ public class Location {
     @Column(name = "longitude", nullable = false)
     private double longitude;
 
-    @Column(name = "date", nullable = false)
+    @Column(name = "creation_date", nullable = false)
     private LocalDateTime creationDate;
 
     @Column(name = "device")

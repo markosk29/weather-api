@@ -1,4 +1,4 @@
-package com.markos.gpsmonitor.server;
+package com.markos.gpsmonitor.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

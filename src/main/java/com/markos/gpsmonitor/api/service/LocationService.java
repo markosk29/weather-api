@@ -33,6 +33,13 @@ public class LocationService {
     }
 
     public List<LocationJSON> getLocationInInterval(String startDateAndTimeString, String endDateAndTimeString) {
+        try {
+            LocalDateTime.parse(startDateAndTimeString);
+            LocalDateTime.parse(endDateAndTimeString);
+        } catch(Exception e) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid date input. Must be of format '2021-12-29T21:05:11'");
+        }
+
         LocalDateTime startDateAndTime = LocalDateTime.parse(startDateAndTimeString);
         LocalDateTime endDateAndTime = LocalDateTime.parse(endDateAndTimeString);
 
